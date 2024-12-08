@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_recursos.empleado,recursos.empleado,model_recursos_empleado,base.group_user,1,1,1,1
+access_recursos.departamento,recursos.departamento,model_recursos_departamento,base.group_user,1,1,1,1
+access_recursos.puesto,recursos.puesto,model_recursos_puesto,base.group_user,1,1,1,1

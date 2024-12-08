@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+
+        <!-- Vista tipo árbol -->
+<!--        <record id="empleado_tree_view" model="ir.ui.view">-->
+<!--            <field name="name">empleado.tree.view</field>-->
+<!--            <field name="model">recursos.empleado</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree>-->
+<!--                    <field name="nombre"/>-->
+<!--                    <field name="rfc"/>-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        &lt;!&ndash; Vista tipo formulario &ndash;&gt;-->
+<!--        <record id="empleado_form_view" model="ir.ui.view">-->
+<!--            <field name="name">empleado.form.view</field>-->
+<!--            <field name="model">recursos.empleado</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form>-->
+<!--                    <group>-->
+<!--                        <field name="nombre"/>-->
+<!--                        <field name="rfc"/>-->
+<!--                    </group>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        &lt;!&ndash; Acción &ndash;&gt;-->
+<!--        <record id="empleado_action" model="ir.actions.act_window">-->
+<!--            <field name="name">Empleados</field>-->
+<!--            <field name="res_model">recursos.empleado</field>-->
+<!--            <field name="view_mode">tree,form</field>-->
+<!--        </record>-->
+
+<!--        &lt;!&ndash; Menús &ndash;&gt;-->
+<!--        <menuitem id="menu_root" name="Recursos Humanos"/>-->
+<!--        <menuitem id="menu_empleado" name="Empleado" parent="menu_root"/>-->
+<!--        <menuitem id="menu_empleados_list" name="Lista de empleados" parent="menu_empleado" action="empleado_action"/>-->
+
+    </data>
+</odoo>
+

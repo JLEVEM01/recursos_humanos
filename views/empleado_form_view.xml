@@ -1,0 +1,91 @@
+<odoo>
+    <data>
+
+        <!-- Vista tipo árbol -->
+        <record id="empleado_tree_view" model="ir.ui.view">
+            <field name="name">empleado.tree.view</field>
+            <field name="model">recursos.empleado</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="rfc"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="departamento_tree_view" model="ir.ui.view">
+            <field name="name">departamento.tree.view</field>
+            <field name="model">recursos.departamento</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nomDepartamento"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="puesto_tree_view" model="ir.ui.view">
+            <field name="name">puesto.tree.view</field>
+            <field name="model">recursos.puesto</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nomPuesto"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista tipo formulario -->
+        <record id="empleado_form_view" model="ir.ui.view">
+            <field name="name">empleado.form.view</field>
+            <field name="model">recursos.empleado</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="nombre"/>
+                            <field name="rfc"/>
+                            <field name="departamento"/>
+                            <field name="puesto"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción -->
+        <record id="empleado_action" model="ir.actions.act_window">
+            <field name="name">Empleados</field>
+            <field name="res_model">recursos.empleado</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="departemento_action" model="ir.actions.act_window">
+            <field name="name">Departamento</field>
+            <field name="res_model">recursos.departamento</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="puesto_action" model="ir.actions.act_window">
+            <field name="name">Puesto</field>
+            <field name="res_model">recursos.puesto</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menús -->
+        <menuitem id="menu_root" name="Recursos Humanos"/>
+        <menuitem id="menu_empleado" name="Recursos Humanos" parent="menu_root"/>
+
+        <menuitem id="menu_empleados_list" name="Empleados" parent="menu_empleado" action="empleado_action"/>
+
+        <menuitem id="menu_departamentos_list" name="Departamentos" parent="menu_empleado"
+                  action="departemento_action"/>
+
+        <menuitem id="menu_puestos_list" name="Puestos" parent="menu_empleado" action="puesto_action"/>
+
+    </data>
+</odoo>
+
