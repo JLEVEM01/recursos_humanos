@@ -5,7 +5,6 @@
         <record id="empleado_tree_view" model="ir.ui.view">
             <field name="name">empleado.tree.view</field>
             <field name="model">recursos.empleado</field>
-            <field name="type">tree</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="nombre"/>
@@ -18,7 +17,6 @@
         <record id="departamento_tree_view" model="ir.ui.view">
             <field name="name">departamento.tree.view</field>
             <field name="model">recursos.departamento</field>
-            <field name="type">tree</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="nomDepartamento"/>
@@ -29,7 +27,6 @@
         <record id="puesto_tree_view" model="ir.ui.view">
             <field name="name">puesto.tree.view</field>
             <field name="model">recursos.puesto</field>
-            <field name="type">tree</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="nomPuesto"/>
@@ -41,15 +38,25 @@
         <record id="empleado_form_view" model="ir.ui.view">
             <field name="name">empleado.form.view</field>
             <field name="model">recursos.empleado</field>
-            <field name="type">form</field>
             <field name="arch" type="xml">
                 <form>
                     <sheet>
                         <group>
-                            <field name="nombre"/>
-                            <field name="rfc"/>
-                            <field name="departamento"/>
-                            <field name="puesto"/>
+                            <group>
+                                <field name="nombre"/>
+                                <field name="rfc"/>
+                                <field name="curp"/>
+                                <field name="domicilio"/>
+
+                            </group>
+                            <group>
+                                <field name="departamento"/>
+                                <field name="puesto"/>
+                                <field name="fechaIngreso"/>
+                                <field name="numSegSocial"/>
+                                <field name="sindicalizado" widget="radio"/>
+
+                            </group>
                         </group>
                     </sheet>
                 </form>
